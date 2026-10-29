@@ -1,0 +1,17 @@
+{
+  "run_id": "a93f1d26d1ed",
+  "status": "tool_error",
+  "question": "正式员工年假最小可以请多久？",
+  "answer": "工具执行失败，当前任务未完成。",
+  "citations": [],
+  "gaps": [
+    "检索工具连续两次返回 TOOL_UNAVAILABLE，无法获取年假最小请假时长的原文证据"
+  ],
+  "clarification": null,
+  "decision_steps": 3,
+  "tool_calls": 2,
+  "model_mode": "live",
+  "complete": false,
+  "elapsed_ms": 7775.495,
+  "boundary": "接口模式为live；引用校验通过不等于开放域语义正确性已获证明。"
+}

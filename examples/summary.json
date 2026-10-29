@@ -1,0 +1,346 @@
+{
+  "mode": "offline_mock",
+  "live_model_validated": false,
+  "corpus": {
+    "documents": 6,
+    "passages": 8
+  },
+  "scope": "本文件仅汇总离线Mock；真实模型实际结果单独见live/summary.json，不能混记两种模式。",
+  "total": 13,
+  "passed": 13,
+  "cases": [
+    {
+      "id": "01_clear",
+      "label": "明确答案",
+      "requirements": [
+        "A01"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "decision_steps": 3,
+      "tool_calls": 2,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "finish"
+      ],
+      "model_mode": "offline_mock",
+      "input": "inputs/01_clear.json",
+      "output": "outputs/01_clear.json",
+      "trace": "traces/01_clear.jsonl",
+      "elapsed_ms": 2.382
+    },
+    {
+      "id": "02_conflict",
+      "label": "制度冲突",
+      "requirements": [
+        "A02"
+      ],
+      "expected_status": "conflict",
+      "actual_status": "conflict",
+      "passed": true,
+      "decision_steps": 4,
+      "tool_calls": 3,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "read_passage",
+        "finish"
+      ],
+      "model_mode": "offline_mock",
+      "input": "inputs/02_conflict.json",
+      "output": "outputs/02_conflict.json",
+      "trace": "traces/02_conflict.jsonl",
+      "elapsed_ms": 1.588
+    },
+    {
+      "id": "03_outside",
+      "label": "资料外问题",
+      "requirements": [
+        "A03"
+      ],
+      "expected_status": "insufficient_evidence",
+      "actual_status": "insufficient_evidence",
+      "passed": true,
+      "decision_steps": 3,
+      "tool_calls": 2,
+      "action_sequence": [
+        "search_documents",
+        "search_documents",
+        "finish"
+      ],
+      "model_mode": "offline_mock",
+      "input": "inputs/03_outside.json",
+      "output": "outputs/03_outside.json",
+      "trace": "traces/03_outside.jsonl",
+      "elapsed_ms": 1.414
+    },
+    {
+      "id": "04_paraphrase",
+      "label": "改写问法",
+      "requirements": [
+        "A04"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "decision_steps": 3,
+      "tool_calls": 2,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "finish"
+      ],
+      "model_mode": "offline_mock",
+      "input": "inputs/04_paraphrase.json",
+      "output": "outputs/04_paraphrase.json",
+      "trace": "traces/04_paraphrase.jsonl",
+      "elapsed_ms": 1.229
+    },
+    {
+      "id": "05_context",
+      "label": "上下文追问",
+      "requirements": [
+        "A05"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "decision_steps": 3,
+      "tool_calls": 2,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "finish"
+      ],
+      "model_mode": "offline_mock",
+      "input": "inputs/05_context.json",
+      "output": "outputs/05_context.json",
+      "trace": "traces/05_context.jsonl",
+      "elapsed_ms": 1.624
+    },
+    {
+      "id": "06_missing_context",
+      "label": "缺少制度主题",
+      "requirements": [
+        "A05"
+      ],
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "passed": true,
+      "decision_steps": 1,
+      "tool_calls": 0,
+      "action_sequence": [
+        "finish"
+      ],
+      "model_mode": "offline_mock",
+      "input": "inputs/06_missing_context.json",
+      "output": "outputs/06_missing_context.json",
+      "trace": "traces/06_missing_context.jsonl",
+      "elapsed_ms": 0.696
+    },
+    {
+      "id": "07_tool_recovery",
+      "label": "检索失败后换查询",
+      "requirements": [
+        "A06"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "decision_steps": 4,
+      "tool_calls": 3,
+      "action_sequence": [
+        "search_documents",
+        "search_documents",
+        "read_passage",
+        "finish"
+      ],
+      "model_mode": "offline_mock",
+      "input": "inputs/07_tool_recovery.json",
+      "output": "outputs/07_tool_recovery.json",
+      "trace": "traces/07_tool_recovery.jsonl",
+      "elapsed_ms": 1.204
+    },
+    {
+      "id": "08_tool_failure",
+      "label": "工具持续失败",
+      "requirements": [
+        "A06"
+      ],
+      "expected_status": "tool_error",
+      "actual_status": "tool_error",
+      "passed": true,
+      "decision_steps": 3,
+      "tool_calls": 2,
+      "action_sequence": [
+        "search_documents",
+        "search_documents",
+        "finish"
+      ],
+      "model_mode": "offline_mock",
+      "input": "inputs/08_tool_failure.json",
+      "output": "outputs/08_tool_failure.json",
+      "trace": "traces/08_tool_failure.jsonl",
+      "elapsed_ms": 0.926
+    },
+    {
+      "id": "09_read_recovery",
+      "label": "原文读取临时失败",
+      "requirements": [
+        "A06"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "decision_steps": 4,
+      "tool_calls": 3,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "read_passage",
+        "finish"
+      ],
+      "model_mode": "offline_mock",
+      "input": "inputs/09_read_recovery.json",
+      "output": "outputs/09_read_recovery.json",
+      "trace": "traces/09_read_recovery.jsonl",
+      "elapsed_ms": 1.984
+    },
+    {
+      "id": "10_step_limit",
+      "label": "步数上限",
+      "requirements": [
+        "A07"
+      ],
+      "expected_status": "limit_reached",
+      "actual_status": "limit_reached",
+      "passed": true,
+      "decision_steps": 1,
+      "tool_calls": 1,
+      "action_sequence": [
+        "search_documents"
+      ],
+      "model_mode": "offline_mock",
+      "input": "inputs/10_step_limit.json",
+      "output": "outputs/10_step_limit.json",
+      "trace": "traces/10_step_limit.jsonl",
+      "elapsed_ms": 2.499
+    },
+    {
+      "id": "11_call_limit",
+      "label": "工具调用上限",
+      "requirements": [
+        "A07"
+      ],
+      "expected_status": "limit_reached",
+      "actual_status": "limit_reached",
+      "passed": true,
+      "decision_steps": 2,
+      "tool_calls": 1,
+      "action_sequence": [
+        "search_documents",
+        "read_passage"
+      ],
+      "model_mode": "offline_mock",
+      "input": "inputs/11_call_limit.json",
+      "output": "outputs/11_call_limit.json",
+      "trace": "traces/11_call_limit.jsonl",
+      "elapsed_ms": 2.633
+    },
+    {
+      "id": "12_single_policy",
+      "label": "移除冲突文档",
+      "requirements": [
+        "A09"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "decision_steps": 3,
+      "tool_calls": 2,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "finish"
+      ],
+      "model_mode": "offline_mock",
+      "input": "inputs/12_single_policy.json",
+      "output": "outputs/12_single_policy.json",
+      "trace": "traces/12_single_policy.jsonl",
+      "elapsed_ms": 1.279
+    },
+    {
+      "id": "13_changed_policy",
+      "label": "替换为21天制度",
+      "requirements": [
+        "A09"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "decision_steps": 3,
+      "tool_calls": 2,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "finish"
+      ],
+      "model_mode": "offline_mock",
+      "input": "inputs/13_changed_policy.json",
+      "output": "outputs/13_changed_policy.json",
+      "trace": "traces/13_changed_policy.jsonl",
+      "elapsed_ms": 1.202
+    }
+  ],
+  "tests": {
+    "status": "passed",
+    "tests": 60,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source": "test-results.xml"
+  },
+  "execution_seconds": 0.1318,
+  "timing_scope": "仅统计本脚本生成并验证案例的执行时间，不代表项目开发用时或笔试平台计时。",
+  "implementation_window": {
+    "first_plan_file_created_utc": "2026-10-28T07:15:14.339494+00:00",
+    "verification_finished_utc": "2026-10-28T07:35:07.980893+00:00",
+    "seconds": 1193.64,
+    "scope": "首份规划文档创建至本次验证结束的本地文件实现窗口；不含此前阅读讨论，非完整答题用时或平台计时。"
+  },
+  "runtime": {
+    "executable": "D:\\anaconda\\envs\\hj13\\python.exe",
+    "python": "3.13.7",
+    "dependencies": {
+      "pydantic": "2.12.2",
+      "httpx": "0.28.1",
+      "python-dotenv": "1.1.1",
+      "pytest": "8.4.2"
+    }
+  },
+  "source_sha256": {
+    "src/knowledge_agent/agent.py": "49b2716c07fe0b3a48e50ed597d918aad7d1169b3db137ba1c0d9a798f099bb4",
+    "src/knowledge_agent/backends.py": "ddd2255a5b8ca5ed8e5ff2021da0e39865b5c6cc9efcc176851cb0c7315d424d",
+    "src/knowledge_agent/cli.py": "2f4ff3adbb6ea650a079ddadc343d3be96faf4581a15a8b2ad984fcdc842dd95",
+    "src/knowledge_agent/credentials.py": "67a86951a69daa70834b00baeb482885861a84ec2f3751f9fb4b9bda0b7f93f1",
+    "src/knowledge_agent/models.py": "373ffa61a087681a2bc0db334c87b1be6966bf72c542c37ff1ffd0af2f47fb26",
+    "src/knowledge_agent/policy.py": "a2ef2504c7ac4cd2a024a07754898b6629e81b63ae9a5dccc9d39ffcb7a6e72d",
+    "src/knowledge_agent/store.py": "c8b89c12d1d4f4ddb1c7c2cce81cf63d725c5eceeed9f7ff8591e4ee608681b4",
+    "src/knowledge_agent/__init__.py": "3d0fb5602660b30a289a09cb13238ee787e39c69e951d6c66fe7f02faed99e8c",
+    "src/knowledge_agent/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "tests/conftest.py": "fadfaf3cd1647e0c11048e1fbf36e88579fcf20c7039e93fbc6cc43e20ec7798",
+    "tests/test_acceptance.py": "ce463aa39efea725ec5272451b50101ca9632fa292bf1da5efe13d513839dc16",
+    "tests/test_cli.py": "343a18c538220c25a93256fd1d079137801872f01a9105b4aa5641621b7100cc",
+    "tests/test_guards.py": "1f83f52dd3f3d57f453d942228d9c4d24124bad8d130d0dc55f21a99993e2873",
+    "tests/test_live_contract.py": "7e0113adb71a55bdd5dd63494379d9c02b0ff8eda499c0376b24d3626c2e16f0",
+    "data/aliases.json": "a2f4fe3d3df2b5596ec3f2b6c0a266b5be41a47665a996ca3e8a1ffba5fbf7ad",
+    "data/corpus.json": "ac5d2d4f6b8aa489f4b16e755126bddedf1a884e11958b6f84d9c60c65f65e86",
+    "scripts/audit_submission.py": "df1474e328a3c29c720be2c8e552628bdd589962d4e7c20ab2966370c982f379",
+    "scripts/run_examples.py": "a94c0a8e6c296951619c0531c5ee123876e77090b4b74d840b8568e9d045e7d6",
+    "scripts/run_live_examples.py": "ba5376d1509447eb19f69ccc34ea4103d3e7fefb1a87fc463e1560d0d966cf1c"
+  },
+  "verification_finished_utc": "2026-10-29T08:29:48.210460+00:00",
+  "live_results": "live/summary.json"
+}

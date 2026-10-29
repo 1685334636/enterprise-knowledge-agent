@@ -1,0 +1,17 @@
+{
+  "run_id": "c5fc805e58b3",
+  "status": "insufficient_evidence",
+  "question": "火星基地今天的氧气库存是多少？",
+  "answer": "现有资料不足以回答该问题，未生成无依据的事实答案。",
+  "citations": [],
+  "gaps": [
+    "知识库中未检索到火星基地氧气库存的任何资料"
+  ],
+  "clarification": null,
+  "decision_steps": 4,
+  "tool_calls": 2,
+  "model_mode": "live",
+  "complete": false,
+  "elapsed_ms": 11054.844,
+  "boundary": "接口模式为live；引用校验通过不等于开放域语义正确性已获证明。"
+}

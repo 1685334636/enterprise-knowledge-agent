@@ -1,0 +1,14 @@
+{
+  "request": {
+    "question": "报销申请的提交期限是多久？",
+    "history": []
+  },
+  "mode": "live",
+  "corpus": "examples/fixtures/changed_policy.json",
+  "max_steps": 8,
+  "max_tool_calls": 6,
+  "fail_once": null,
+  "always_fail": null,
+  "model": "deepseek-flash",
+  "base_url": "https://api.deepseek.com"
+}

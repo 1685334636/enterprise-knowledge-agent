@@ -1,0 +1,14 @@
+﻿case,expected,actual,passed,steps,tool_calls,mode
+01_clear,answered,answered,True,3,2,offline_mock
+02_conflict,conflict,conflict,True,4,3,offline_mock
+03_outside,insufficient_evidence,insufficient_evidence,True,3,2,offline_mock
+04_paraphrase,answered,answered,True,3,2,offline_mock
+05_context,answered,answered,True,3,2,offline_mock
+06_missing_context,needs_clarification,needs_clarification,True,1,0,offline_mock
+07_tool_recovery,answered,answered,True,4,3,offline_mock
+08_tool_failure,tool_error,tool_error,True,3,2,offline_mock
+09_read_recovery,answered,answered,True,4,3,offline_mock
+10_step_limit,limit_reached,limit_reached,True,1,1,offline_mock
+11_call_limit,limit_reached,limit_reached,True,2,1,offline_mock
+12_single_policy,answered,answered,True,3,2,offline_mock
+13_changed_policy,answered,answered,True,3,2,offline_mock

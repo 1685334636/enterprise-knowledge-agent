@@ -1,0 +1,90 @@
+{
+  "mode": "live",
+  "provider": "DeepSeek",
+  "model": "deepseek-flash",
+  "base_url": "https://api.deepseek.com",
+  "verified_at_utc": "2026-10-29T08:21:04.054896+00:00",
+  "run_folder": "runs/20261029T082053Z_9433",
+  "full_suite": false,
+  "live_model_validated": false,
+  "total": 2,
+  "passed": 2,
+  "distinct_action_sequences": 2,
+  "cases": [
+    {
+      "id": "05_context",
+      "label": "上下文追问",
+      "requirements": [
+        "A05"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/05_context.json",
+      "output": "outputs/05_context.json",
+      "trace": "traces/05_context.jsonl",
+      "decision_steps": 3,
+      "tool_calls": 2,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "finish"
+      ],
+      "model_requests": 3,
+      "total_tokens": 4498,
+      "elapsed_ms": 7223.906
+    },
+    {
+      "id": "06_missing_context",
+      "label": "缺少制度主题",
+      "requirements": [
+        "A05"
+      ],
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/06_missing_context.json",
+      "output": "outputs/06_missing_context.json",
+      "trace": "traces/06_missing_context.jsonl",
+      "decision_steps": 1,
+      "tool_calls": 0,
+      "action_sequence": [
+        "finish"
+      ],
+      "model_requests": 1,
+      "total_tokens": 1032,
+      "elapsed_ms": 3043.712
+    }
+  ],
+  "model_requests": 4,
+  "total_tokens": 5530,
+  "execution_seconds": 10.326,
+  "runtime": {
+    "executable": "D:\\anaconda\\envs\\hj13\\python.exe",
+    "python": "3.13.7"
+  },
+  "boundary": "真实模型单轮验收结果，不等于随机重复稳定性或生产质量保证；故障为本地业务工具显式注入。",
+  "source_sha256": {
+    "src/knowledge_agent/agent.py": "49b2716c07fe0b3a48e50ed597d918aad7d1169b3db137ba1c0d9a798f099bb4",
+    "src/knowledge_agent/backends.py": "a5f9434cfefd0199ca8ff1adf101862104c4cfa279803118d4517c22ccb3ae49",
+    "src/knowledge_agent/cli.py": "2f4ff3adbb6ea650a079ddadc343d3be96faf4581a15a8b2ad984fcdc842dd95",
+    "src/knowledge_agent/credentials.py": "67a86951a69daa70834b00baeb482885861a84ec2f3751f9fb4b9bda0b7f93f1",
+    "src/knowledge_agent/models.py": "373ffa61a087681a2bc0db334c87b1be6966bf72c542c37ff1ffd0af2f47fb26",
+    "src/knowledge_agent/policy.py": "fbde3581e520564742631bb22084c1ff29c67ce33669bc755b3cfa3cfb423e80",
+    "src/knowledge_agent/store.py": "c8b89c12d1d4f4ddb1c7c2cce81cf63d725c5eceeed9f7ff8591e4ee608681b4",
+    "src/knowledge_agent/__init__.py": "3d0fb5602660b30a289a09cb13238ee787e39c69e951d6c66fe7f02faed99e8c",
+    "src/knowledge_agent/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "tests/conftest.py": "fadfaf3cd1647e0c11048e1fbf36e88579fcf20c7039e93fbc6cc43e20ec7798",
+    "tests/test_acceptance.py": "ce463aa39efea725ec5272451b50101ca9632fa292bf1da5efe13d513839dc16",
+    "tests/test_cli.py": "343a18c538220c25a93256fd1d079137801872f01a9105b4aa5641621b7100cc",
+    "tests/test_guards.py": "317ba9a417ccd500eee136ef02e69a605f005c3562cbba5d33732efbb08aec5e",
+    "tests/test_live_contract.py": "865bce16e655c72420b28d3258e2230430b27ea78a1e0db782896d6d12bced3e",
+    "data/aliases.json": "a2f4fe3d3df2b5596ec3f2b6c0a266b5be41a47665a996ca3e8a1ffba5fbf7ad",
+    "data/corpus.json": "ac5d2d4f6b8aa489f4b16e755126bddedf1a884e11958b6f84d9c60c65f65e86",
+    "scripts/audit_submission.py": "8cd4c6d8140c2519a616df13a747708eb4c500308416aeb80f1539982cf225b7",
+    "scripts/run_examples.py": "f0573dc3fa39578e2796e9f6106d33b390db059e8f56121be15812970e709e0a",
+    "scripts/run_live_examples.py": "69d543fd30ce3ab22ac9ed933b525e86f03fa6e9f17422f382a3ded367ccb1f4"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "run_id": "f59f39c2af40",
+  "status": "tool_error",
+  "question": "正式员工年假最小可以请多久？",
+  "answer": "工具执行失败，当前任务未完成。",
+  "citations": [],
+  "gaps": [
+    "相关工具连续不可用，未完成证据核验。"
+  ],
+  "clarification": null,
+  "decision_steps": 3,
+  "tool_calls": 2,
+  "model_mode": "offline_mock",
+  "complete": false,
+  "elapsed_ms": 0.926,
+  "boundary": "离线规则Mock，仅验证流程和工程约束，不证明真实模型决策效果。"
+}

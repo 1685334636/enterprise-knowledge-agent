@@ -1,0 +1,23 @@
+{
+  "request": {
+    "question": "那实习生可以申请吗？",
+    "history": [
+      {
+        "role": "user",
+        "content": "正式员工年假最小可以请多久？"
+      },
+      {
+        "role": "assistant",
+        "content": "根据本次已读取的资料：\n- 年假最小申请单位为0.5天。此规则适用于中国大陆正式员工。 [D03:P01；版本2025-01-15；适用范围：中国大陆正式员工]"
+      }
+    ]
+  },
+  "mode": "live",
+  "corpus": "data/corpus.json",
+  "max_steps": 8,
+  "max_tool_calls": 6,
+  "fail_once": null,
+  "always_fail": null,
+  "model": "deepseek-flash",
+  "base_url": "https://api.deepseek.com"
+}

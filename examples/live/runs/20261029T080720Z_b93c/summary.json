@@ -1,0 +1,357 @@
+{
+  "mode": "live",
+  "provider": "DeepSeek",
+  "model": "deepseek-flash",
+  "base_url": "https://api.deepseek.com",
+  "verified_at_utc": "2026-10-29T08:09:41.336727+00:00",
+  "run_folder": "runs/20261029T080720Z_b93c",
+  "full_suite": true,
+  "live_model_validated": false,
+  "total": 13,
+  "passed": 12,
+  "distinct_action_sequences": 9,
+  "cases": [
+    {
+      "id": "01_clear",
+      "label": "明确答案",
+      "requirements": [
+        "A01"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/01_clear.json",
+      "output": "outputs/01_clear.json",
+      "trace": "traces/01_clear.jsonl",
+      "decision_steps": 3,
+      "tool_calls": 2,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "finish"
+      ],
+      "model_requests": 3,
+      "total_tokens": 3600,
+      "elapsed_ms": 11494.985
+    },
+    {
+      "id": "02_conflict",
+      "label": "制度冲突",
+      "requirements": [
+        "A02"
+      ],
+      "expected_status": "conflict",
+      "actual_status": "conflict",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/02_conflict.json",
+      "output": "outputs/02_conflict.json",
+      "trace": "traces/02_conflict.jsonl",
+      "decision_steps": 4,
+      "tool_calls": 3,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "read_passage",
+        "finish"
+      ],
+      "model_requests": 4,
+      "total_tokens": 5826,
+      "elapsed_ms": 13349.861
+    },
+    {
+      "id": "03_outside",
+      "label": "资料外问题",
+      "requirements": [
+        "A03"
+      ],
+      "expected_status": "insufficient_evidence",
+      "actual_status": "insufficient_evidence",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/03_outside.json",
+      "output": "outputs/03_outside.json",
+      "trace": "traces/03_outside.jsonl",
+      "decision_steps": 3,
+      "tool_calls": 2,
+      "action_sequence": [
+        "search_documents",
+        "search_documents",
+        "finish"
+      ],
+      "model_requests": 3,
+      "total_tokens": 2905,
+      "elapsed_ms": 9190.089
+    },
+    {
+      "id": "04_paraphrase",
+      "label": "改写问法",
+      "requirements": [
+        "A04"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/04_paraphrase.json",
+      "output": "outputs/04_paraphrase.json",
+      "trace": "traces/04_paraphrase.jsonl",
+      "decision_steps": 3,
+      "tool_calls": 2,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "finish"
+      ],
+      "model_requests": 3,
+      "total_tokens": 3604,
+      "elapsed_ms": 8324.906
+    },
+    {
+      "id": "05_context",
+      "label": "上下文追问",
+      "requirements": [
+        "A05"
+      ],
+      "expected_status": "answered",
+      "actual_status": "needs_clarification",
+      "passed": false,
+      "errors": [
+        "预期answered，实际needs_clarification",
+        "上下文追问未依据实习生年假说明"
+      ],
+      "input": "inputs/05_context.json",
+      "output": "outputs/05_context.json",
+      "trace": "traces/05_context.jsonl",
+      "decision_steps": 1,
+      "tool_calls": 0,
+      "action_sequence": [
+        "finish"
+      ],
+      "model_requests": 1,
+      "total_tokens": 1010,
+      "elapsed_ms": 3120.672
+    },
+    {
+      "id": "06_missing_context",
+      "label": "缺少制度主题",
+      "requirements": [
+        "A05"
+      ],
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/06_missing_context.json",
+      "output": "outputs/06_missing_context.json",
+      "trace": "traces/06_missing_context.jsonl",
+      "decision_steps": 1,
+      "tool_calls": 0,
+      "action_sequence": [
+        "finish"
+      ],
+      "model_requests": 1,
+      "total_tokens": 933,
+      "elapsed_ms": 19219.111
+    },
+    {
+      "id": "07_tool_recovery",
+      "label": "检索失败后换查询",
+      "requirements": [
+        "A06"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/07_tool_recovery.json",
+      "output": "outputs/07_tool_recovery.json",
+      "trace": "traces/07_tool_recovery.jsonl",
+      "decision_steps": 4,
+      "tool_calls": 3,
+      "action_sequence": [
+        "search_documents",
+        "search_documents",
+        "read_passage",
+        "finish"
+      ],
+      "model_requests": 4,
+      "total_tokens": 4706,
+      "elapsed_ms": 12799.086
+    },
+    {
+      "id": "08_tool_failure",
+      "label": "工具持续失败",
+      "requirements": [
+        "A06"
+      ],
+      "expected_status": "tool_error",
+      "actual_status": "tool_error",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/08_tool_failure.json",
+      "output": "outputs/08_tool_failure.json",
+      "trace": "traces/08_tool_failure.jsonl",
+      "decision_steps": 4,
+      "tool_calls": 3,
+      "action_sequence": [
+        "search_documents",
+        "search_documents",
+        "search_documents",
+        "finish"
+      ],
+      "model_requests": 4,
+      "total_tokens": 4070,
+      "elapsed_ms": 12746.851
+    },
+    {
+      "id": "09_read_recovery",
+      "label": "原文读取临时失败",
+      "requirements": [
+        "A06"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/09_read_recovery.json",
+      "output": "outputs/09_read_recovery.json",
+      "trace": "traces/09_read_recovery.jsonl",
+      "decision_steps": 4,
+      "tool_calls": 3,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "read_passage",
+        "finish"
+      ],
+      "model_requests": 4,
+      "total_tokens": 5004,
+      "elapsed_ms": 12636.932
+    },
+    {
+      "id": "10_step_limit",
+      "label": "步数上限",
+      "requirements": [
+        "A07"
+      ],
+      "expected_status": "limit_reached",
+      "actual_status": "limit_reached",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/10_step_limit.json",
+      "output": "outputs/10_step_limit.json",
+      "trace": "traces/10_step_limit.jsonl",
+      "decision_steps": 1,
+      "tool_calls": 1,
+      "action_sequence": [
+        "search_documents"
+      ],
+      "model_requests": 1,
+      "total_tokens": 891,
+      "elapsed_ms": 2651.883
+    },
+    {
+      "id": "11_call_limit",
+      "label": "工具调用上限",
+      "requirements": [
+        "A07"
+      ],
+      "expected_status": "limit_reached",
+      "actual_status": "limit_reached",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/11_call_limit.json",
+      "output": "outputs/11_call_limit.json",
+      "trace": "traces/11_call_limit.jsonl",
+      "decision_steps": 2,
+      "tool_calls": 1,
+      "action_sequence": [
+        "search_documents",
+        "read_passage"
+      ],
+      "model_requests": 2,
+      "total_tokens": 2157,
+      "elapsed_ms": 6794.762
+    },
+    {
+      "id": "12_single_policy",
+      "label": "移除冲突文档",
+      "requirements": [
+        "A09"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/12_single_policy.json",
+      "output": "outputs/12_single_policy.json",
+      "trace": "traces/12_single_policy.jsonl",
+      "decision_steps": 4,
+      "tool_calls": 3,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "search_documents",
+        "finish"
+      ],
+      "model_requests": 4,
+      "total_tokens": 5690,
+      "elapsed_ms": 15408.063
+    },
+    {
+      "id": "13_changed_policy",
+      "label": "替换为21天制度",
+      "requirements": [
+        "A09"
+      ],
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "passed": true,
+      "errors": [],
+      "input": "inputs/13_changed_policy.json",
+      "output": "outputs/13_changed_policy.json",
+      "trace": "traces/13_changed_policy.jsonl",
+      "decision_steps": 4,
+      "tool_calls": 3,
+      "action_sequence": [
+        "search_documents",
+        "read_passage",
+        "search_documents",
+        "finish"
+      ],
+      "model_requests": 4,
+      "total_tokens": 5588,
+      "elapsed_ms": 13189.64
+    }
+  ],
+  "model_requests": 38,
+  "total_tokens": 45984,
+  "execution_seconds": 141.192,
+  "runtime": {
+    "executable": "D:\\anaconda\\envs\\hj13\\python.exe",
+    "python": "3.13.7"
+  },
+  "boundary": "真实模型单轮验收结果，不等于随机重复稳定性或生产质量保证；故障为本地业务工具显式注入。",
+  "source_sha256": {
+    "src/knowledge_agent/agent.py": "49b2716c07fe0b3a48e50ed597d918aad7d1169b3db137ba1c0d9a798f099bb4",
+    "src/knowledge_agent/backends.py": "a2ee028267fd048a00c4b31b3c3d5eb6988274ff6a2c942393bc692af4563e45",
+    "src/knowledge_agent/cli.py": "2f4ff3adbb6ea650a079ddadc343d3be96faf4581a15a8b2ad984fcdc842dd95",
+    "src/knowledge_agent/credentials.py": "67a86951a69daa70834b00baeb482885861a84ec2f3751f9fb4b9bda0b7f93f1",
+    "src/knowledge_agent/models.py": "373ffa61a087681a2bc0db334c87b1be6966bf72c542c37ff1ffd0af2f47fb26",
+    "src/knowledge_agent/policy.py": "fbde3581e520564742631bb22084c1ff29c67ce33669bc755b3cfa3cfb423e80",
+    "src/knowledge_agent/store.py": "c8b89c12d1d4f4ddb1c7c2cce81cf63d725c5eceeed9f7ff8591e4ee608681b4",
+    "src/knowledge_agent/__init__.py": "3d0fb5602660b30a289a09cb13238ee787e39c69e951d6c66fe7f02faed99e8c",
+    "src/knowledge_agent/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "tests/conftest.py": "fadfaf3cd1647e0c11048e1fbf36e88579fcf20c7039e93fbc6cc43e20ec7798",
+    "tests/test_acceptance.py": "ce463aa39efea725ec5272451b50101ca9632fa292bf1da5efe13d513839dc16",
+    "tests/test_cli.py": "343a18c538220c25a93256fd1d079137801872f01a9105b4aa5641621b7100cc",
+    "tests/test_guards.py": "317ba9a417ccd500eee136ef02e69a605f005c3562cbba5d33732efbb08aec5e",
+    "tests/test_live_contract.py": "a5d92fc2167d1debd94f7aa70f9505a1525799abba4e376c261aa92f3b0ec257",
+    "data/aliases.json": "a2f4fe3d3df2b5596ec3f2b6c0a266b5be41a47665a996ca3e8a1ffba5fbf7ad",
+    "data/corpus.json": "ac5d2d4f6b8aa489f4b16e755126bddedf1a884e11958b6f84d9c60c65f65e86",
+    "scripts/run_examples.py": "3ed4bd4e48380db82018ba10c816f872b252d4e4bb852533f90ea97366f9c5b9",
+    "scripts/run_live_examples.py": "2c89f3be04ca2a657e67c1956ae48a301bb7735a0684bed890b6d5261dca3903"
+  }
+}

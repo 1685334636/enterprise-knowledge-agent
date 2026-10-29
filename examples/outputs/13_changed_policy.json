@@ -1,0 +1,24 @@
+{
+  "run_id": "037c2aded4db",
+  "status": "answered",
+  "question": "报销申请的提交期限是多久？",
+  "answer": "根据本次已读取的资料：\n- 报销申请应在费用发生后21个自然日内提交。 [D01:P01；版本2025-03-01；适用范围：未说明]",
+  "citations": [
+    {
+      "doc_id": "D01",
+      "passage_id": "D01:P01",
+      "title": "差旅报销申请办法（合成）",
+      "version_date": "2025-03-01",
+      "scope": "未说明",
+      "quote": "报销申请应在费用发生后21个自然日内提交。"
+    }
+  ],
+  "gaps": [],
+  "clarification": null,
+  "decision_steps": 3,
+  "tool_calls": 2,
+  "model_mode": "offline_mock",
+  "complete": true,
+  "elapsed_ms": 1.202,
+  "boundary": "离线规则Mock，仅验证流程和工程约束，不证明真实模型决策效果。"
+}

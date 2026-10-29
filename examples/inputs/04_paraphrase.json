@@ -1,0 +1,12 @@
+{
+  "request": {
+    "question": "我想休半天年假，制度允许吗？",
+    "history": []
+  },
+  "mode": "mock",
+  "corpus": "data/corpus.json",
+  "max_steps": 8,
+  "max_tool_calls": 6,
+  "fail_once": null,
+  "always_fail": null
+}

@@ -1,0 +1,24 @@
+{
+  "run_id": "d4f5c391ea05",
+  "status": "answered",
+  "question": "正式员工年假最小可以请多久？",
+  "answer": "根据本次已读取的资料：\n- 年假最小申请单位为0.5天。此规则适用于中国大陆正式员工。 [D03:P01；版本2025-01-15；适用范围：中国大陆正式员工]",
+  "citations": [
+    {
+      "doc_id": "D03",
+      "passage_id": "D03:P01",
+      "title": "正式员工年假申请规范（合成）",
+      "version_date": "2025-01-15",
+      "scope": "中国大陆正式员工",
+      "quote": "年假最小申请单位为0.5天。此规则适用于中国大陆正式员工。"
+    }
+  ],
+  "gaps": [],
+  "clarification": null,
+  "decision_steps": 4,
+  "tool_calls": 3,
+  "model_mode": "live",
+  "complete": true,
+  "elapsed_ms": 11007.66,
+  "boundary": "接口模式为live；引用校验通过不等于开放域语义正确性已获证明。"
+}

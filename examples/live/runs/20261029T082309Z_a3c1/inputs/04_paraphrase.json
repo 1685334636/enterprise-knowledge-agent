@@ -1,0 +1,14 @@
+{
+  "request": {
+    "question": "我想休半天年假，制度允许吗？",
+    "history": []
+  },
+  "mode": "live",
+  "corpus": "data/corpus.json",
+  "max_steps": 8,
+  "max_tool_calls": 6,
+  "fail_once": null,
+  "always_fail": null,
+  "model": "deepseek-flash",
+  "base_url": "https://api.deepseek.com"
+}

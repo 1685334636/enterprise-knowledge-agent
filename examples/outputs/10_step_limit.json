@@ -1,0 +1,17 @@
+{
+  "run_id": "c0e45c2be95d",
+  "status": "limit_reached",
+  "question": "正式员工年假最小可以请多久？",
+  "answer": "已达到决策步数或工具调用上限，当前任务未完成。",
+  "citations": [],
+  "gaps": [
+    "决策步数已达上限，尚未得到通过证据校验的最终答案。"
+  ],
+  "clarification": null,
+  "decision_steps": 1,
+  "tool_calls": 1,
+  "model_mode": "offline_mock",
+  "complete": false,
+  "elapsed_ms": 2.499,
+  "boundary": "离线规则Mock，仅验证流程和工程约束，不证明真实模型决策效果。"
+}

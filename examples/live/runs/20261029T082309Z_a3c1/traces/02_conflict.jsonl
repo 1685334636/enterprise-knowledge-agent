@@ -1,0 +1,4 @@
+{"seq": 1, "run_id": "2c413064a848", "event": "run_start", "step": 0, "question": "报销申请的提交期限是多久？", "history": [], "model_mode": "live", "max_steps": 8, "max_tool_calls": 6}
+{"seq": 2, "run_id": "2c413064a848", "event": "model_response", "step": 1, "metadata": {"requested_model": "deepseek-flash", "response_id": null, "returned_model": null, "http_status": null, "usage": {}, "finish_reason": null, "elapsed_ms": 4105.289}}
+{"seq": 3, "run_id": "2c413064a848", "event": "model_error", "step": 1, "message": "模型连接或动作结构不合法；未切换到其他模式。"}
+{"seq": 4, "run_id": "2c413064a848", "event": "run_end", "step": 1, "result": {"run_id": "2c413064a848", "status": "model_error", "question": "报销申请的提交期限是多久？", "answer": "模型接口或动作输出异常，当前任务未完成。", "citations": [], "gaps": ["未获得有效模型动作，请检查接口配置和JSON格式。"], "clarification": null, "decision_steps": 1, "tool_calls": 0, "model_mode": "live", "complete": false, "elapsed_ms": 4106.609, "boundary": "接口模式为live；引用校验通过不等于开放域语义正确性已获证明。"}}

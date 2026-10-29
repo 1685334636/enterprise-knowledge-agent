@@ -1,0 +1,18 @@
+{
+  "run_id": "e72fb0945a46",
+  "status": "needs_clarification",
+  "question": "那实习生可以申请吗？",
+  "answer": "需要补充信息后才能继续。\n请问您指的是实习生申请哪项事项？例如年假、报销、文档导入权限等，请补充具体业务主题。",
+  "citations": [],
+  "gaps": [
+    "缺少业务主题（申请对象）",
+    "无对话历史可补全主题"
+  ],
+  "clarification": "请问您指的是实习生申请哪项事项？例如年假、报销、文档导入权限等，请补充具体业务主题。",
+  "decision_steps": 1,
+  "tool_calls": 0,
+  "model_mode": "live",
+  "complete": false,
+  "elapsed_ms": 2701.07,
+  "boundary": "接口模式为live；引用校验通过不等于开放域语义正确性已获证明。"
+}

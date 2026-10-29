@@ -1,0 +1,17 @@
+{
+  "run_id": "4c1e29ebd81a",
+  "status": "needs_clarification",
+  "question": "那实习生可以申请吗？",
+  "answer": "需要补充信息后才能继续。\n你想查询实习生的年假资格、请假流程，还是其他制度？请补充具体主题。",
+  "citations": [],
+  "gaps": [
+    "缺少所查询制度的主题。"
+  ],
+  "clarification": "你想查询实习生的年假资格、请假流程，还是其他制度？请补充具体主题。",
+  "decision_steps": 1,
+  "tool_calls": 0,
+  "model_mode": "offline_mock",
+  "complete": false,
+  "elapsed_ms": 0.696,
+  "boundary": "离线规则Mock，仅验证流程和工程约束，不证明真实模型决策效果。"
+}

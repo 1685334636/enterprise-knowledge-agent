@@ -1,0 +1,17 @@
+{
+  "run_id": "2c413064a848",
+  "status": "model_error",
+  "question": "报销申请的提交期限是多久？",
+  "answer": "模型接口或动作输出异常，当前任务未完成。",
+  "citations": [],
+  "gaps": [
+    "未获得有效模型动作，请检查接口配置和JSON格式。"
+  ],
+  "clarification": null,
+  "decision_steps": 1,
+  "tool_calls": 0,
+  "model_mode": "live",
+  "complete": false,
+  "elapsed_ms": 4106.609,
+  "boundary": "接口模式为live；引用校验通过不等于开放域语义正确性已获证明。"
+}

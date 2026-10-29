@@ -1,0 +1,17 @@
+{
+  "run_id": "80435028f07a",
+  "status": "insufficient_evidence",
+  "question": "火星基地今天的氧气库存是多少？",
+  "answer": "现有资料不足以回答该问题，未生成无依据的事实答案。",
+  "citations": [],
+  "gaps": [
+    "已检索的资料没有该问题所需的原文依据。"
+  ],
+  "clarification": null,
+  "decision_steps": 3,
+  "tool_calls": 2,
+  "model_mode": "offline_mock",
+  "complete": false,
+  "elapsed_ms": 1.414,
+  "boundary": "离线规则Mock，仅验证流程和工程约束，不证明真实模型决策效果。"
+}

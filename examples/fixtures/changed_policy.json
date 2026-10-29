@@ -1,0 +1,88 @@
+{
+  "synthetic": true,
+  "description": "完全合成的演示制度，不代表任何真实公司政策。未声明优先级时不按日期推定替代关系。",
+  "documents": [
+    {
+      "doc_id": "D01",
+      "title": "差旅报销申请办法（合成）",
+      "version_date": "2025-03-01",
+      "scope": "未说明",
+      "passages": [
+        {
+          "passage_id": "D01:P01",
+          "text": "报销申请应在费用发生后21个自然日内提交。此份材料未说明适用部门及与其他制度的优先关系。",
+          "fact_key": "expense.submission_deadline",
+          "fact_value": "21个自然日"
+        }
+      ]
+    },
+    {
+      "doc_id": "D03",
+      "title": "正式员工年假申请规范（合成）",
+      "version_date": "2025-01-15",
+      "scope": "中国大陆正式员工",
+      "passages": [
+        {
+          "passage_id": "D03:P01",
+          "text": "年假最小申请单位为0.5天。此规则适用于中国大陆正式员工。",
+          "fact_key": "annual_leave.minimum_unit",
+          "fact_value": "0.5天"
+        },
+        {
+          "passage_id": "D03:P02",
+          "text": "年假申请需经直属主管审批。尚未获得审批的申请不视为批准休假。",
+          "fact_key": "annual_leave.approval",
+          "fact_value": "直属主管审批"
+        }
+      ]
+    },
+    {
+      "doc_id": "D04",
+      "title": "星帆知识助手产品说明（合成）",
+      "version_date": "2025-05-10",
+      "scope": "星帆知识助手1.0演示版",
+      "passages": [
+        {
+          "passage_id": "D04:P01",
+          "text": "星帆知识助手1.0支持导入PDF和Markdown文档。产品演示版资料未包含上传文件大小限制。",
+          "fact_key": "product.import_formats",
+          "fact_value": "PDF和Markdown"
+        },
+        {
+          "passage_id": "D04:P02",
+          "text": "星帆知识助手1.0不支持音频上传。",
+          "fact_key": "product.audio_upload",
+          "fact_value": "不支持音频上传"
+        }
+      ]
+    },
+    {
+      "doc_id": "D05",
+      "title": "实习生年假及请假说明（合成）",
+      "version_date": "2025-02-10",
+      "scope": "实习生",
+      "passages": [
+        {
+          "passage_id": "D05:P01",
+          "text": "实习生不适用正式员工带薪年假规则。实习生确需请假时，应联系指导人及人事确认安排。",
+          "fact_key": "annual_leave.intern_eligibility",
+          "fact_value": "不适用"
+        }
+      ]
+    },
+    {
+      "doc_id": "D06",
+      "title": "差旅报销票据要求（合成）",
+      "version_date": "2025-04-10",
+      "scope": "已批准的差旅报销",
+      "passages": [
+        {
+          "passage_id": "D06:P01",
+          "text": "差旅报销需提供合规发票及已批准的差旅申请单。本材料不规定报销申请提交期限。",
+          "fact_key": "expense.required_receipts",
+          "fact_value": "合规发票及已批准的差旅申请单"
+        }
+      ]
+    }
+  ]
+}

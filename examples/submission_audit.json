@@ -1,0 +1,28 @@
+{
+  "local_ready": true,
+  "tests": {
+    "tests": 60,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "offline_cases": 13,
+  "live_cases": 13,
+  "live_model": "deepseek-flash",
+  "live_model_responses": 39,
+  "distinct_live_paths": 9,
+  "live_http_attempts": 39,
+  "credential_scan": {
+    "inspected_files": 287,
+    "leaks": 0
+  },
+  "failures": [],
+  "github_uploaded": false,
+  "pending_submission_items": [
+    "等待用户上传指令",
+    "GitHub仓库URL",
+    "最终commit SHA",
+    "如选择私有仓库则配置评审只读权限"
+  ],
+  "personal_review": "候选人个人手工修改与审阅尚未由本人补记，AI使用范围已如实说明。"
+}
